@@ -68,6 +68,8 @@ export const GlobalStyle = createGlobalStyle`
         color: ${colors.primary};
         font-family: 'Work Sans';
         padding: 0 20px;
+        max-width: 1440px;
+        margin: 0 auto;
       `};
 
 

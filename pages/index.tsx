@@ -1,12 +1,10 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Hero from '@components/featured/Hero';
 
+const Home: NextPage = () => (
+  <div>
+    <Hero type="home" />
+  </div>
+);
 
-const Home: NextPage = () => {
-  return (
-    <div >
-     Homepage
-    </div>
-  )
-}
-
-export default Home
+export default Home;
