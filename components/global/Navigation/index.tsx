@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import Text from '@components/shared/Text';
-
 import Button from '@components/shared/Button';
 import {
   LinkWrapper,
@@ -11,7 +10,9 @@ import { buttons } from './config';
 
 const Navigation: FC = () => (
   <NavigationWrapper>
-    <Text tag="span">.Luke</Text>
+    <Button href="/">
+      <Text tag="span">.Luke</Text>
+    </Button>
     <NavigationList>
       {buttons.map(({ text, url }) => (
         <LinkWrapper key={text}>

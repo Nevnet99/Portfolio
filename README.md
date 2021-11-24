@@ -13,3 +13,5 @@ npm run dev
 - [ ] Multi support for fonts.
 - [ ] Types for styled components theme.
 - [ ] Clamp font sizes and convert them to rem.
+- [ ] Fix Eslint error in TS files
+- [ ] Image optimisation & squooshing.

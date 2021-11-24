@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
+// TODO: fix theming types.
+
 const breakpointValues = {
   tablet: 768,
   laptop: 1024,
