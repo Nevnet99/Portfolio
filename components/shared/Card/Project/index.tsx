@@ -1,8 +1,8 @@
-import Text from '@components/shared/Text';
 import React, { FC } from 'react';
 import { ProjectCardWrapper } from './styles';
+import { Props } from './types';
 
-const ProjectCard: FC = ({ title, image: { src, alt } }) => (
+const ProjectCard: FC<Props> = ({ image: { src, alt } }: Props) => (
   <ProjectCardWrapper>
     <img src={src} alt={alt} />
   </ProjectCardWrapper>

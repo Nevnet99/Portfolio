@@ -19,8 +19,15 @@
       "@components/*": [
         "./components/*"
       ],
-   
-      
+      "@lib": [
+        "lib/notion.ts"
+      ],
+      "@types": [
+        "types/index.ts"
+      ],
+      "@helpers/*": [
+        "helpers/*"
+      ],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

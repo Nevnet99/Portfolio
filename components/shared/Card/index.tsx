@@ -3,7 +3,7 @@ import BlogCard from './Blog';
 import ProjectCard from './Project';
 import { CardProps } from './types';
 
-const Card: FC<CardProps> = ({ type, ...rest }) => {
+const Card: FC<CardProps> = ({ type, ...rest }: CardProps) => {
   const cardComponents = {
     blog: <BlogCard {...rest} />,
     project: <ProjectCard {...rest} />,

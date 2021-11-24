@@ -1,3 +1,6 @@
 export interface CardProps {
-    types: 'blog' | 'project';
+    type: 'blog' | 'project';
+    title?: string;
+    date?: string;
+    image?: { src: string };
 }
