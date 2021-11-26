@@ -22,8 +22,8 @@
       "@lib": [
         "lib/notion.ts"
       ],
-      "@types": [
-        "types/index.ts"
+      "@types/*": [
+        "./types/*"
       ],
       "@helpers/*": [
         "helpers/*"

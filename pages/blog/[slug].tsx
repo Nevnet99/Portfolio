@@ -5,7 +5,7 @@ import { getDatabase, getRecordMap } from '@lib';
 import styled from 'styled-components';
 import { NotionRenderer, Code } from 'react-notion-x';
 import BlogPosts from '@components/featured/BlogPosts';
-import { SlugProps, SlugStaticProps, SlugStaticReturn } from '../types/blog';
+import { SlugProps, SlugStaticProps, SlugStaticReturn } from '../../blog';
 
 const NotionWrapper = styled.div`
   .notion,
