@@ -6,7 +6,7 @@ import { Props } from './types';
 
 const ProjectCard: FC<Props> = ({ image }: Props) => (
   <ProjectCardWrapper>
-    {image && <Image src={image.src} alt={image.alt} />}
+    {image && <Image src={image.src} alt={image.alt} width={360} height={550} />}
   </ProjectCardWrapper>
 );
 

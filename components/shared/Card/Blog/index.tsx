@@ -7,7 +7,7 @@ import { Props } from './types';
 
 const BlogCard: FC<Props> = ({ title, date, image }: Props) => (
   <Wrapper>
-    <ImageWrapper>{image && <Image src={image.src} alt={image.alt} />}</ImageWrapper>
+    <ImageWrapper>{image && <Image src={image.src} alt={image.alt} layout="fill" />}</ImageWrapper>
     {title && <Text tag="h3">{title}</Text>}
     {date && (
     <Text tag="p">

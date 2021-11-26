@@ -6,7 +6,7 @@ import { ImageWrapper, Wrapper } from './styles.js';
 const RevealHeroImage: FC = () => (
   <Wrapper>
     <ImageWrapper>
-      <Image src={LukeImage.src} alt="" />
+      <Image src={LukeImage.src} alt="" layout="fill" />
     </ImageWrapper>
   </Wrapper>
 );
