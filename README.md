@@ -37,3 +37,4 @@ npm run dev
 - [ ] Clamp font sizes and convert them to rem.
 - [ ] Fix Eslint error in TS files
 - [ ] Image optimisation & squooshing.
+- [ ] TS Errors for storybook.
