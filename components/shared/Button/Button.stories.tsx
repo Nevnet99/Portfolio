@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta } from '@storybook/react';
 
 import Button from '.';
@@ -9,4 +10,4 @@ export default {
   title: 'Components/Button',
 } as Meta;
 
-export const Primary: React.VFC<{}> = () => <Button href="">Button</Button>;
+export const Primary: React.VFC = () => <Button href="">Button</Button>;
