@@ -15,20 +15,20 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
   h2 {
     font-size: ${({
-      theme: {
-        typography: { fontSize },
-      },
-    }) => fontSize.lg};
+    theme: {
+      typography: { fontSize },
+    },
+  }) => fontSize.lg};
     font-weight: 300;
     margin-bottom: 10px;
   }
 
   p {
     font-size: ${({
-      theme: {
-        typography: { fontSize },
-      },
-    }) => fontSize.xs};
+    theme: {
+      typography: { fontSize },
+    },
+  }) => fontSize.xs};
     font-weight: 300;
   }
 `;

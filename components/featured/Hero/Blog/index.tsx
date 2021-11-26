@@ -1,11 +1,5 @@
-import React from 'react'
+import React, { FC } from 'react';
 
-const BlogHero = () => {
-    return (
-        <div>
-            Blog Hero Placeholder
-        </div>
-    )
-}
+const BlogHero: FC = () => <div>Blog Hero Placeholder</div>;
 
-export default BlogHero
+export default BlogHero;

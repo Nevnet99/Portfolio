@@ -1,3 +1,4 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import Hero from '@components/featured/Hero';
 
@@ -13,7 +14,7 @@ const Home: NextPage = ({ blogDatabase: { results } }: any) => (
   </div>
 );
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (): Promise<any> => {
   const blogDatabase = await getDatabase('c0b4dd7ac9a94e46a93b7e758b107e5f');
 
   return {

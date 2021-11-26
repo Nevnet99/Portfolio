@@ -1,8 +1,5 @@
 export interface Props {
-    title?: string;
-    date: string;
-    image: {
-        src: string;
-        alt: string;
-    };
+    title?: string | undefined;
+    date?: string | undefined;
+    image?: { src: string; alt?: string } | undefined;
 }

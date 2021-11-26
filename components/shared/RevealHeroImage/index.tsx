@@ -1,6 +1,6 @@
 import React from 'react';
 import LukeImage from '../../../public/headshot-free.png';
-import { ImageWrapper, Wrapper } from './styles';
+import { ImageWrapper, Wrapper } from './styles.js';
 
 const RevealHeroImage = () => (
   <Wrapper>
