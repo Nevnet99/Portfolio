@@ -30,7 +30,7 @@ const BlogPosts: FC<Props> = ({
           date, name, previewImage, slug,
         },
       }) => (
-        <Button href={`/blog/${slug?.rich_text[0].text.content}`}>
+        <Button href={`/blog/${slug?.rich_text[0].text.content}`} key={name?.title[0]?.text?.content}>
           <PostWrapper>
             <Card
               type="blog"

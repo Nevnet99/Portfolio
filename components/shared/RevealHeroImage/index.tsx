@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Image from 'next/image';
 import LukeImage from '../../../public/headshot-free.png';
 import { ImageWrapper, Wrapper } from './styles.js';
 
-const RevealHeroImage = () => (
+const RevealHeroImage: FC = () => (
   <Wrapper>
     <ImageWrapper>
-      <img src={LukeImage.src} alt="" />
+      <Image src={LukeImage.src} alt="" />
     </ImageWrapper>
   </Wrapper>
 );

@@ -7,6 +7,8 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@next/next/recommended',
+    'plugin:react/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -33,6 +35,8 @@ module.exports = {
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+    // TODO: REMOVE THIS
+    '@typescript-eslint/no-explicit-any': 'off',
     'react/jsx-props-no-spreading': [
       0,
       {
