@@ -1,6 +1,6 @@
 import Card from '@components/shared/Card';
-import React from 'react';
-import { ProjectsWrapper, ProjectWrapper, Wrapper } from './styles';
+import React, { FC } from 'react';
+import { ProjectsWrapper, ProjectWrapper, Wrapper } from './styles.js';
 
 const projects = [
   {
@@ -39,10 +39,10 @@ const projects = [
     },
   },
 ];
-const Projects = () => (
+const Projects: FC = () => (
   <Wrapper id="projects">
     <ProjectsWrapper>
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <ProjectWrapper key={project?.title}>
           <Card {...project} type="project" />
         </ProjectWrapper>

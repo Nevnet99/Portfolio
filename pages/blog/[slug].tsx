@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React, { FC } from 'react';
 import { getDatabase, getRecordMap } from '@lib';
 import styled from 'styled-components';
 import { NotionRenderer, Code } from 'react-notion-x';
 import BlogPosts from '@components/featured/BlogPosts';
-import { SlugProps, SlugStaticProps, SlugStaticReturn, StaticPathsProps } from '../types/blog';
+import { SlugProps, SlugStaticProps, SlugStaticReturn } from '../../blog';
 
 const NotionWrapper = styled.div`
   .notion,
@@ -42,15 +44,20 @@ const BlogPage: FC<SlugProps> = ({ recordMap, database: { results }, pageId }: S
     />
   </NotionWrapper>
 );
-
-export const getStaticPaths = async (): Promise<StaticPathsProps> => {
+// TODO: Return type not working for next
+export const getStaticPaths = async (): Promise<any> => {
   const database = await getDatabase('c0b4dd7ac9a94e46a93b7e758b107e5f');
 
-  const paths = database?.results.map((page) => ({
-    params: {
-      slug: page?.properties?.slug.rich_text[0].text.content,
-    },
-  }));
+  // TODO: Check issues on github as this is a type on the schema
+  const paths = database?.results.map(({ properties }: { properties: any }) => {
+    const slug = properties?.slug.rich_text[0].text.content;
+
+    return {
+      params: {
+        slug,
+      },
+    };
+  });
 
   return {
     paths,
@@ -63,9 +70,9 @@ export const getStaticProps = async ({
 }: SlugStaticProps): Promise<SlugStaticReturn> => {
   const database = await getDatabase('c0b4dd7ac9a94e46a93b7e758b107e5f');
 
-  const [matchedPage] = database.results.filter(
-    ({ properties: { slug } }) => slug?.rich_text[0].text.content === pathSlug
-  );
+  // TODO: Fix max len rules (only has an issue with this specific function)
+  // eslint-disable-next-line max-len
+  const [matchedPage] = database.results.filter(({ properties }: { properties: any }) => properties?.slug?.rich_text[0].text.content === pathSlug);
 
   const recordMap = await getRecordMap(matchedPage.id);
 

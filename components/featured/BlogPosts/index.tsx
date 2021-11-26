@@ -1,8 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+
 import React, { FC } from 'react';
 import Card from '@components/shared/Card';
 import Text from '@components/shared/Text';
 import Button from '@components/shared/Button';
-import { Wrapper, Posts, PostWrapper, Content } from './styles';
+import {
+  Wrapper, Posts, PostWrapper, Content,
+} from './styles';
 import { Props } from './types';
 // TODO: ADD view more button for loading currently not enough blog posts.
 
@@ -19,8 +25,12 @@ const BlogPosts: FC<Props> = ({
     </Content>
     {/* TODO: create helper function to clean up blogposts from notion db. */}
     <Posts>
-      {blogPosts?.map(({ properties: { date, name, previewImage, slug } }) => (
-        <Button href={`/blog/${slug?.rich_text[0].text.content}`}>
+      {blogPosts?.map(({
+        properties: {
+          date, name, previewImage, slug,
+        },
+      }) => (
+        <Button href={`/blog/${slug?.rich_text[0].text.content}`} key={name?.title[0]?.text?.content}>
           <PostWrapper>
             <Card
               type="blog"

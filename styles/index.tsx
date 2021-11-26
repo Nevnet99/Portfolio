@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
 // TODO: fix theming types.
@@ -9,16 +9,14 @@ const breakpointValues = {
   desktop: 1440,
 };
 
-const setBreakpoint = (
-  breakpoint: 'tablet' | 'laptop' | 'desktop' | number
-): number | string => {
+const setBreakpoint = (breakpoint: 'tablet' | 'laptop' | 'desktop' | number): number | string => {
   if (typeof breakpoint === 'string' && breakpoint in breakpointValues)
     return breakpointValues[breakpoint];
 
   return breakpoint;
 };
 
-export const theme = {
+export const customTheme: DefaultTheme = {
   typography: {
     fontSize: {
       xs: '24px',

@@ -5,8 +5,7 @@ export const Wrapper = styled.section<WrapperProps>`
   display: flex;
   flex-direction: column;
 
-  ${({ related }) =>
-    `${related ? `margin-top: 0px;` : `  margin-top: 160px;`}`};
+  ${({ related }) => `${related ? 'margin-top: 0px;' : '  margin-top: 160px;'}`};
 `;
 
 export const Content = styled.div`
@@ -18,19 +17,19 @@ export const Content = styled.div`
   h2 {
     margin: 0;
     font-size: ${({
-      theme: {
-        typography: { fontSize },
-      },
-    }) => fontSize.lg};
+    theme: {
+      typography: { fontSize },
+    },
+  }) => fontSize.lg};
     font-weight: 300;
   }
 
   p {
     font-size: ${({
-      theme: {
-        typography: { fontSize },
-      },
-    }) => fontSize.lg};
+    theme: {
+      typography: { fontSize },
+    },
+  }) => fontSize.lg};
   }
 `;
 

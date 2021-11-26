@@ -12,10 +12,10 @@ export const NavigationWrapper = styled.nav`
 
   span {
     font-size: ${({
-      theme: {
-        typography: { fontSize },
-      },
-    }) => fontSize.xxl};
+    theme: {
+      typography: { fontSize },
+    },
+  }) => fontSize.xxl};
   }
 `;
 

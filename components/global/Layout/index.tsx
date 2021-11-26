@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import Navigation from '@components/global/Navigation';
 import { ThemeProvider } from 'styled-components';
-import { theme, GlobalStyle } from '../../../styles';
+import { customTheme, GlobalStyle } from '../../../styles';
 
 const Layout: FC = ({ children }) => (
   <>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={customTheme}>
       <GlobalStyle />
       <Navigation />
       {children}

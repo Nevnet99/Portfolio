@@ -10,5 +10,5 @@ export interface Props {
 }
 
 export interface WrapperProps {
-    related: boolean;
+    related: boolean | undefined;
 }
