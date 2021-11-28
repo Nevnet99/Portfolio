@@ -1,18 +1,18 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import Button from '.';
+import Layout from '.';
 import { Props } from './types';
 
 export default {
-  title: 'Components / Shared / Button / 4. All Stories',
-  component: Button,
+  title: 'Components / Global / Layout / 4. All Stories',
+  component: Layout,
   argTypes: { },
 } as Meta;
 
-const Template: Story<Props> = (args) => <Button {...args} />;
+const Template: Story<Props> = (args) => <Layout {...args}>Example</Layout>;
 
 export const Default = Template.bind({});
 Default.args = {
-  text: 'Testing',
+  temporary: 'Layout',
 };
