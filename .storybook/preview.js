@@ -6,6 +6,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  options: {
+    storySort: {
+      method: "numeric",
+    },
+  },
   layout: 'fullscreen',
   viewport: {
     viewports: {

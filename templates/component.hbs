@@ -1,0 +1,12 @@
+import React, { FC } from 'react';
+import { Props } from './types';
+
+import { Wrapper } from './{{pascalCase name}}.styles.js';
+
+const {{pascalCase name}}: FC<Props> = ({ temporary = '{{pascalCase name}}' }: Props) => (
+  <Wrapper>
+    {temporary}
+  </Wrapper>
+);
+
+export default {{pascalCase name}};
